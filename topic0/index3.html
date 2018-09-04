@@ -43,14 +43,17 @@
 			text-align: center;
 			width: 100%;
 			background-color: lightgrey;
+			padding: 30px 0px 30px 0px !important;
 		}
-		table{
-			border-radius: 3%;
-			display:inline-block;
-			border: 1.5px solid white;
+		form{
+			width: 100%;
 			text-align: center;
-			background-color: white;
-			color: red;
+
+		}
+		input,select,textarea{
+			display: flex;
+			width: 250px;
+			margin: 20px auto 20px auto;
 		}
 		footer{
 			display:inline-block
@@ -73,8 +76,15 @@
 				<input type="text" name="apellido"placeholder="Apellido">
 				<input type="email" name="email" placeholder="Correo electrónico">
 				<input type="date" name="cumpleaños">
-				<!--select-option-->
+				<select>
+					<option selected="" disabled="">Seleccione un deporte</option>
+					<option>Futbol</option>
+					<option>Natacion</option>
+					<option>Rugby</option>
+					<option>Basket</option>
+				</select>
 				<textarea placeholder="Biografia"></textarea>
+				<button type="submit">Enviar</button>
 			</form>
 		</section>
 	</main>

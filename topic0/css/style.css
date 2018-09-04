@@ -1,0 +1,46 @@
+html{
+	font-size: 14px;
+	font: 100%/1.5 "Open Sans", sans-serif;
+  	font-weight: 400;
+}
+body{
+	height: 600px;
+}
+header{
+	text-align: center;
+}
+footer{
+	text-align: center;
+	bottom: 0;
+}
+.header{
+	font-size: 30px;
+	background-color: magenta;
+	height: 20%;
+}
+.footer{
+	font-size: 10px;
+	background-color: magenta;
+	height: 10%;
+}
+.content{
+	font-size: 14px;
+	height: 70%;
+}
+.navigation{
+	font-size: 12px;
+	background-color: blue;
+	height: 70%;
+}
+.sidebar{
+	font-size: 10px;
+	background-color: magenta;
+	height: 70%;
+}
+@media (min-width: 40rem) {
+	.header{
+	font-size: 46px;
+	background-color: magenta;
+	height: 20%;
+}
+}
