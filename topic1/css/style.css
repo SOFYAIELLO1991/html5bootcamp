@@ -21,3 +21,7 @@ section#indice{
 .success{
 	background-color: green !important;
 }
+.right{
+	text-align: right;
+	background-color: #fafafa;
+}
