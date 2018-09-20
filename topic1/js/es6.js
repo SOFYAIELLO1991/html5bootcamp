@@ -107,13 +107,13 @@ httpRepo({
     console.log(value);
 
     for (i = 0; i < 50; i++){
-      console.log(value[i]);
-      var z = document.createElement('li');
-      z.className += "right"; 
-      z.innerHTML=value[i];
+      var datos = JSON.parse(value);
+    console.log(datos.items[i]);
+    var z = document.createElement('li');
+    z.className += "right";
+    z.innerHTML = 'nombre del repo: '+datos.items[i].name;
 
-      document.body.appendChild(z);
-
+    document.body.appendChild(z);
     }
     repo.className += "success";
     console.log("success");

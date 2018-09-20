@@ -101,10 +101,12 @@ httpRepo({
   console.log(value);
 
   for (i = 0; i < 50; i++) {
-    console.log(value[i]);
+    
+    var datos = JSON.parse(value);
+    console.log(datos.items[i]);
     var z = document.createElement('li');
     z.className += "right";
-    z.innerHTML = value[i];
+    z.innerHTML = 'nombre del repo: '+datos.items[i].name;
 
     document.body.appendChild(z);
   }
@@ -114,3 +116,26 @@ httpRepo({
   console.log("error ", reason);
   repo.className += "error";
 });
+
+
+function seeTable() {
+  var body = document.getElementsByTagName("body")[0];
+
+  var tabla   = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+  for (var i = 0; i < 2; i++) {
+    var fila = document.createElement("tr");
+ 
+    for (var j = 0; j < 2; j++) {
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("fila:"+i+", columna:"+j);
+      celda.appendChild(textoCelda);
+      fila.appendChild(celda);
+    }
+    tblBody.appendChild(fila);
+  }
+  tabla.appendChild(tblBody);
+  body.appendChild(tabla);
+  tabla.setAttribute("border", "1");
+}
