@@ -1,3 +1,27 @@
 body{
 	text-align: center;
 }
+h2{
+	font-size: 50px;
+}
+section#section{
+	text-align: center;
+	display: none;
+}
+section#indice{
+	text-decoration: none;
+	margin: 40px 0px;
+}
+.aparecer{
+	display: block !important;
+}
+.error{
+	background-color: red !important;
+}
+.success{
+	background-color: green !important;
+}
+.right{
+	text-align: right;
+	background-color: #fafafa;
+}

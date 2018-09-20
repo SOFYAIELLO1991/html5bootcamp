@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>topic1</title>
-
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -12,27 +12,34 @@
 	<section>
 		
 	</section>
-	<section id="section" hidden="">
+	<section id="section">
 		<h2>Hello World</h2>
 	</section>
+	<section id="indice">
+		<a href="/">Indice</a>
+	</section>
 	<section>
-		<button type="button" onclick="evento()">Evento</button>
+		<p id="response"></p>
+		<button type="button" onclick="httpGet();">GET</button>
+	</section>
+	<section  id="ajax">
+		<p id="respajax"></p>
+		<h1>Ajax</h1>
+	</section>
+	<section id="repo">
+		<h1>Repositories</h1>
+		<ul id="resprepo"></ul>
+	</section>
+	<section id="stable">
+		<h1>Tablas</h1>
+		<button type="button" onclick="seeTable();">Mostrar tabla</button>
+		<table id="table"></table>
 	</section>
 	<footer>
 		
 	</footer>
-	<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function(){
-		var req = new XMLHttpRequest();
-		req.open('GET', 'http://api.icndb.com/jokes/random', false); 
-		req.send(null);
-		if (req.status == 200)
-		  dump(req.responseText);
-    })
-	function evento(){
-		alert("Mensaje de alerta");
-	}
-	</script>
+	<script type="text/javascript" src="js/js.js"></script>
+	
 </body>
 
 </html>
