@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React</title>
+	<script src="https://unpkg.com/react@15/dist/react.min.js"> </script><script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js">
+</script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<div id="root1"></div>
+	<script type="text/babel">
+    class Hello extends React.Component {
+    
+	    constructor(){
+	        super();
+	        this.state = {
+	            message: "my friend (from state)!"
+	        };
+	        this.updateMessage = this.updateMessage.bind(this);
+	    }
+	    updateMessage() {
+	        this.setState({
+	            message: "my friend (from changed state)!"
+	        });
+	    }
+	    render() {
+	         return (
+	           <div>
+	             <h1>Hello {this.state.message}!</h1>
+	             <button onClick={this.updateMessage}>Click me!</button>
+	           </div>   
+	        )
+	    }
+	}
+
+	class Bye extends React.Component {
+	    render() {
+	        return <h1>Bye Bye {this.props.message}!</h1>;
+	    }
+	}
+	ReactDOM.render(
+		<Hello/>,
+	    document.getElementById("root")
+	);
+	ReactDOM.render(
+	    <Bye message="React"/>,
+	    document.getElementById("root1")
+	);
+    </script>
+</body>
+</html>

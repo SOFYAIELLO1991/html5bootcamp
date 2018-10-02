@@ -5,13 +5,13 @@ class Movie {
         this.duration = duration;
     }
     play(){
-        console.log(Movie);
+        console.log(Movie+'PLAY');
     }
     pause(){
-        
+        console.log(Movie+'PAUSE');
     }
     resume(){
-        
+        console.log(Movie+'RESUME');
     }
 }
 class Actor {
